@@ -35,8 +35,8 @@ nav{
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:25px;
 }
 
@@ -57,7 +57,7 @@ header{
     background:linear-gradient(135deg,#2563eb,#38bdf8);
     color:white;
     text-align:center;
-    padding:100px 20px;
+    padding:110px 20px;
 }
 
 header h1{
@@ -101,6 +101,31 @@ h2{
     margin-bottom:20px;
 }
 
+/* USŁUGI */
+
+.karty{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.karta{
+    padding:25px;
+    border-radius:15px;
+    background:#f8fbff;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.karta:hover{
+    transform:translateY(-8px);
+}
+
+.karta h3{
+    margin-bottom:12px;
+}
+
 /* CENNIK */
 
 .usluga{
@@ -135,6 +160,26 @@ input{
     transform:translateY(-2px);
 }
 
+#komunikat{
+    margin-top:20px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+/* STOPKA */
+
+footer{
+    text-align:center;
+    background:#0f172a;
+    color:white;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
 /* TELEFON */
 
 @media(max-width:768px){
@@ -142,11 +187,13 @@ input{
     nav{
         flex-direction:column;
         gap:15px;
+        padding:15px;
     }
 
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
+        gap:15px;
     }
 
     header h1{
@@ -155,6 +202,11 @@ input{
 
     section{
         margin:20px;
+        padding:25px;
     }
 
+    .usluga{
+        flex-direction:column;
+        gap:5px;
+    }
 }
