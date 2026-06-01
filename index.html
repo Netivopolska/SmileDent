@@ -13,7 +13,6 @@
   <ul>
     <li><a href="#uslugi">Usługi</a></li>
     <li><a href="#cennik">Cennik</a></li>
-    <li><a href="#opinie">Opinie</a></li>
     <li><button class="nav-btn open-modal">Rezerwacja</button></li>
   </ul>
 </nav>
@@ -21,14 +20,8 @@
 <header class="hero">
   <p class="badge">Nowoczesna stomatologia</p>
   <h1>Twój uśmiech w najlepszych rękach.</h1>
-  <p class="hero-text">
-    Elegancki gabinet stomatologiczny, szybka rezerwacja wizyt i komfortowe leczenie.
-  </p>
-
-  <div class="hero-buttons">
-    <button class="main-btn open-modal">Umów wizytę</button>
-    <a href="#cennik">Zobacz cennik</a>
-  </div>
+  <p>Elegancki gabinet, szybka rezerwacja i komfortowe leczenie.</p>
+  <button class="main-btn open-modal">Umów wizytę</button>
 </header>
 
 <section id="uslugi">
@@ -36,23 +29,9 @@
   <h2>Nasze usługi</h2>
 
   <div class="grid">
-    <div class="card">
-      <span>🦷</span>
-      <h3>Przeglądy</h3>
-      <p>Kontrola stanu uzębienia i szybkie wykrywanie problemów.</p>
-    </div>
-
-    <div class="card">
-      <span>🪥</span>
-      <h3>Higienizacja</h3>
-      <p>Skaling, piaskowanie i profesjonalne czyszczenie zębów.</p>
-    </div>
-
-    <div class="card">
-      <span>✨</span>
-      <h3>Wybielanie</h3>
-      <p>Bezpieczne wybielanie i poprawa estetyki uśmiechu.</p>
-    </div>
+    <div class="card"><span>🦷</span><h3>Przeglądy</h3><p>Kontrola zdrowia zębów.</p></div>
+    <div class="card"><span>🪥</span><h3>Higienizacja</h3><p>Skaling i piaskowanie.</p></div>
+    <div class="card"><span>✨</span><h3>Wybielanie</h3><p>Estetyczny biały uśmiech.</p></div>
   </div>
 </section>
 
@@ -61,27 +40,10 @@
   <h2>Cennik</h2>
 
   <div class="price">
-    <div><span>Przegląd stomatologiczny</span><strong>150 zł</strong></div>
+    <div><span>Przegląd</span><strong>150 zł</strong></div>
     <div><span>Higienizacja</span><strong>250 zł</strong></div>
-    <div><span>Wybielanie zębów</span><strong>700 zł</strong></div>
+    <div><span>Wybielanie</span><strong>700 zł</strong></div>
     <div><span>Leczenie kanałowe</span><strong>od 600 zł</strong></div>
-  </div>
-</section>
-
-<section id="opinie">
-  <p class="mini-title">Pacjenci</p>
-  <h2>Opinie</h2>
-
-  <div class="grid">
-    <div class="opinia">
-      <p>“Bardzo elegancki gabinet i miła obsługa. Wszystko szybko i profesjonalnie.”</p>
-      <strong>Anna K.</strong>
-    </div>
-
-    <div class="opinia">
-      <p>“Rezerwacja była prosta, a sama wizyta bez stresu. Polecam.”</p>
-      <strong>Michał P.</strong>
-    </div>
   </div>
 </section>
 
@@ -94,14 +56,31 @@
 
     <form id="formularz">
       <input type="text" id="imie" placeholder="Imię i nazwisko" required>
+
+      <select id="usluga" required>
+        <option value="">Wybierz usługę</option>
+        <option>Przegląd stomatologiczny</option>
+        <option>Higienizacja</option>
+        <option>Wybielanie zębów</option>
+        <option>Leczenie kanałowe</option>
+      </select>
+
       <input type="date" id="data" required>
-      <input type="time" id="godzina" required>
+
+      <div class="godziny" id="godziny"></div>
+
       <button type="submit" class="main-btn">Zarezerwuj</button>
     </form>
 
     <div id="komunikat"></div>
   </div>
 </div>
+
+<section>
+  <p class="mini-title">Panel</p>
+  <h2>Zapisane wizyty</h2>
+  <div id="listaWizyt"></div>
+</section>
 
 <footer>
   <h3>SmileDent</h3>
