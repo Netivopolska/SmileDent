@@ -9,124 +9,99 @@
 <body>
 
 <nav>
-  <div class="logo">Smile<span>Dent</span></div>
+  <div class="logo">SmileDent</div>
   <ul>
     <li><a href="#uslugi">Usługi</a></li>
     <li><a href="#cennik">Cennik</a></li>
     <li><a href="#opinie">Opinie</a></li>
-    <li><a href="#rezerwacja" class="nav-btn">Rezerwacja</a></li>
+    <li><button class="nav-btn open-modal">Rezerwacja</button></li>
   </ul>
 </nav>
 
 <header class="hero">
-  <div class="hero-text">
-    <p class="badge">Nowoczesny gabinet stomatologiczny</p>
-    <h1>Zdrowy uśmiech zaczyna się tutaj</h1>
-    <p class="opis">
-      Profesjonalna opieka, szybka rezerwacja i komfortowe leczenie dla całej rodziny.
-    </p>
+  <p class="badge">Nowoczesna stomatologia</p>
+  <h1>Twój uśmiech w najlepszych rękach.</h1>
+  <p class="hero-text">
+    Elegancki gabinet stomatologiczny, szybka rezerwacja wizyt i komfortowe leczenie.
+  </p>
 
-    <div class="hero-buttons">
-      <button id="umowBtn">Umów wizytę</button>
-      <a href="#cennik">Zobacz cennik</a>
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <h3>Najbliższy wolny termin</h3>
-    <p>Dzisiaj</p>
-    <strong>17:30</strong>
-    <span>Przegląd stomatologiczny</span>
+  <div class="hero-buttons">
+    <button class="main-btn open-modal">Umów wizytę</button>
+    <a href="#cennik">Zobacz cennik</a>
   </div>
 </header>
 
 <section id="uslugi">
-  <div class="section-title">
-    <p>Co oferujemy?</p>
-    <h2>Nasze usługi</h2>
-  </div>
+  <p class="mini-title">Oferta</p>
+  <h2>Nasze usługi</h2>
 
-  <div class="cards">
+  <div class="grid">
     <div class="card">
-      <div class="icon">🦷</div>
+      <span>🦷</span>
       <h3>Przeglądy</h3>
-      <p>Regularna kontrola zdrowia zębów i szybkie wykrywanie problemów.</p>
+      <p>Kontrola stanu uzębienia i szybkie wykrywanie problemów.</p>
     </div>
 
     <div class="card">
-      <div class="icon">🪥</div>
+      <span>🪥</span>
       <h3>Higienizacja</h3>
-      <p>Skaling, piaskowanie i profesjonalne czyszczenie jamy ustnej.</p>
+      <p>Skaling, piaskowanie i profesjonalne czyszczenie zębów.</p>
     </div>
 
     <div class="card">
-      <div class="icon">✨</div>
+      <span>✨</span>
       <h3>Wybielanie</h3>
-      <p>Bezpieczne wybielanie zębów i poprawa estetyki uśmiechu.</p>
+      <p>Bezpieczne wybielanie i poprawa estetyki uśmiechu.</p>
     </div>
   </div>
 </section>
 
 <section id="cennik">
-  <div class="section-title">
-    <p>Przejrzyste ceny</p>
-    <h2>Cennik</h2>
-  </div>
+  <p class="mini-title">Ceny</p>
+  <h2>Cennik</h2>
 
-  <div class="price-list">
-    <div class="price-row">
-      <span>Przegląd stomatologiczny</span>
-      <strong>150 zł</strong>
-    </div>
-    <div class="price-row">
-      <span>Higienizacja</span>
-      <strong>250 zł</strong>
-    </div>
-    <div class="price-row">
-      <span>Wybielanie zębów</span>
-      <strong>700 zł</strong>
-    </div>
-    <div class="price-row">
-      <span>Leczenie kanałowe</span>
-      <strong>od 600 zł</strong>
-    </div>
+  <div class="price">
+    <div><span>Przegląd stomatologiczny</span><strong>150 zł</strong></div>
+    <div><span>Higienizacja</span><strong>250 zł</strong></div>
+    <div><span>Wybielanie zębów</span><strong>700 zł</strong></div>
+    <div><span>Leczenie kanałowe</span><strong>od 600 zł</strong></div>
   </div>
 </section>
 
 <section id="opinie">
-  <div class="section-title">
-    <p>Zaufali nam pacjenci</p>
-    <h2>Opinie</h2>
-  </div>
+  <p class="mini-title">Pacjenci</p>
+  <h2>Opinie</h2>
 
-  <div class="reviews">
-    <div class="review">
-      <p>“Bardzo profesjonalna obsługa i piękny gabinet. Polecam!”</p>
-      <strong>— Anna K.</strong>
+  <div class="grid">
+    <div class="opinia">
+      <p>“Bardzo elegancki gabinet i miła obsługa. Wszystko szybko i profesjonalnie.”</p>
+      <strong>Anna K.</strong>
     </div>
 
-    <div class="review">
-      <p>“Szybka rezerwacja i zero stresu podczas wizyty.”</p>
-      <strong>— Michał P.</strong>
+    <div class="opinia">
+      <p>“Rezerwacja była prosta, a sama wizyta bez stresu. Polecam.”</p>
+      <strong>Michał P.</strong>
     </div>
   </div>
 </section>
 
-<section id="rezerwacja">
-  <div class="section-title">
-    <p>Wybierz dogodny termin</p>
-    <h2>Rezerwacja wizyty</h2>
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="close" id="closeBtn">×</button>
+
+    <p class="mini-title">Rezerwacja</p>
+    <h2>Umów wizytę</h2>
+
+    <form id="formularz">
+      <input type="text" id="imie" placeholder="Imię i nazwisko" required>
+      <input type="date" id="data" required>
+      <input type="time" id="godzina" required>
+      <button type="submit" class="main-btn">Zarezerwuj</button>
+    </form>
+
+    <div id="komunikat"></div>
   </div>
-
-  <form id="formularz">
-    <input type="text" id="imie" placeholder="Imię i nazwisko" required>
-    <input type="date" id="data" required>
-    <input type="time" id="godzina" required>
-    <button type="submit">Zarezerwuj termin</button>
-  </form>
-
-  <div id="komunikat"></div>
-</section>
+</div>
 
 <footer>
   <h3>SmileDent</h3>
