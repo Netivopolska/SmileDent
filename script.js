@@ -34,15 +34,24 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => mobileNav.classList.remove('open'));
 });
 
-// ── Scroll animations (Intersection Observer)
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.15 });
+// ── Scroll animations (tylko desktop)
+const isMobile = window.innerWidth <= 768;
 
-document.querySelectorAll(
-  '.stat-item, .card, .doctor-card, .price-row, .fade-up'
-).forEach(el => observer.observe(el));
+if (!isMobile) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(
+    '.stat-item, .card, .doctor-card, .price-row, .fade-up'
+  ).forEach(el => observer.observe(el));
+} else {
+  // Na mobile od razu pokaż wszystko
+  document.querySelectorAll(
+    '.stat-item, .card, .doctor-card, .price-row, .fade-up'
+  ).forEach(el => el.classList.add('visible'));
+}
