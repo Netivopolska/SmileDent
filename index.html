@@ -3,85 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmileDent</title>
+  <title>SmileDent | Nowoczesna stomatologia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <div class="logo">SmileDent</div>
+<nav class="navbar">
+  <div class="logo">Smile<span>Dent</span></div>
+
   <ul>
     <li><a href="#uslugi">Usługi</a></li>
+    <li><a href="#zespol">Zespół</a></li>
     <li><a href="#cennik">Cennik</a></li>
-    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
     <li><button class="nav-btn open-modal">Rezerwacja</button></li>
   </ul>
 </nav>
 
 <header class="hero">
-  <p class="badge">Nowoczesna stomatologia</p>
-  <h1>Twój uśmiech w najlepszych rękach.</h1>
-  <p class="hero-text">
-    Elegancki gabinet stomatologiczny, szybka rezerwacja wizyt i komfortowe leczenie.
-  </p>
+  <div class="hero-content">
+    <p class="badge">Nowoczesny gabinet stomatologiczny</p>
+    <h1>Zdrowy uśmiech. Bez stresu. W dobrym stylu.</h1>
+    <p class="hero-text">
+      Profesjonalna opieka stomatologiczna, komfortowe leczenie i szybka rezerwacja online.
+    </p>
 
-  <div class="hero-buttons">
-    <button class="main-btn open-modal">Umów wizytę</button>
-    <a href="#cennik">Zobacz cennik</a>
+    <div class="hero-buttons">
+      <button class="main-btn open-modal">Umów wizytę</button>
+      <a href="#uslugi">Zobacz ofertę</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="card-top">Najbliższe terminy</div>
+    <h3>Rezerwacja online</h3>
+    <p>Wybierz termin przez Google Calendar.</p>
+    <button class="main-btn open-modal">Sprawdź terminy</button>
   </div>
 </header>
 
-<section id="uslugi">
+<section id="uslugi" class="section">
   <p class="mini-title">Oferta</p>
   <h2>Nasze usługi</h2>
 
   <div class="grid">
-    <div class="card">
+    <div class="service-card">
       <span>🦷</span>
       <h3>Przeglądy</h3>
       <p>Kontrola stanu uzębienia i szybkie wykrywanie problemów.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <span>🪥</span>
       <h3>Higienizacja</h3>
       <p>Skaling, piaskowanie i profesjonalne czyszczenie zębów.</p>
     </div>
 
-    <div class="card">
+    <div class="service-card">
       <span>✨</span>
       <h3>Wybielanie</h3>
       <p>Bezpieczne wybielanie i poprawa estetyki uśmiechu.</p>
     </div>
+
+    <div class="service-card">
+      <span>🛡️</span>
+      <h3>Leczenie</h3>
+      <p>Nowoczesne leczenie zachowawcze i kanałowe.</p>
+    </div>
   </div>
 </section>
 
-<section id="cennik">
-  <p class="mini-title">Ceny</p>
+<section id="zespol" class="section dark-section">
+  <p class="mini-title">Specjaliści</p>
+  <h2>Nasz zespół</h2>
+
+  <div class="grid">
+    <div class="doctor-card">
+      <div class="doctor-photo">AK</div>
+      <h3>dr Anna Kowalska</h3>
+      <p>Stomatologia zachowawcza</p>
+    </div>
+
+    <div class="doctor-card">
+      <div class="doctor-photo">MN</div>
+      <h3>dr Michał Nowak</h3>
+      <p>Endodoncja i leczenie kanałowe</p>
+    </div>
+
+    <div class="doctor-card">
+      <div class="doctor-photo">KW</div>
+      <h3>dr Katarzyna Wiśniewska</h3>
+      <p>Stomatologia estetyczna</p>
+    </div>
+  </div>
+</section>
+
+<section id="cennik" class="section">
+  <p class="mini-title">Przejrzyste ceny</p>
   <h2>Cennik</h2>
 
-  <div class="price">
-    <div><span>Przegląd stomatologiczny</span><strong>150 zł</strong></div>
-    <div><span>Higienizacja</span><strong>250 zł</strong></div>
-    <div><span>Wybielanie zębów</span><strong>700 zł</strong></div>
-    <div><span>Leczenie kanałowe</span><strong>od 600 zł</strong></div>
+  <div class="price-list">
+    <div class="price-row">
+      <span>Przegląd stomatologiczny</span>
+      <strong>150 zł</strong>
+    </div>
+
+    <div class="price-row">
+      <span>Higienizacja</span>
+      <strong>250 zł</strong>
+    </div>
+
+    <div class="price-row">
+      <span>Wybielanie zębów</span>
+      <strong>700 zł</strong>
+    </div>
+
+    <div class="price-row">
+      <span>Leczenie kanałowe</span>
+      <strong>od 600 zł</strong>
+    </div>
   </div>
 </section>
 
-<section id="opinie">
+<section class="section">
   <p class="mini-title">Pacjenci</p>
   <h2>Opinie</h2>
 
   <div class="grid">
-    <div class="opinia">
-      <p>“Bardzo elegancki gabinet i miła obsługa. Wszystko szybko i profesjonalnie.”</p>
+    <div class="review">
+      <p>“Świetny gabinet, bardzo miła obsługa i pełen profesjonalizm.”</p>
       <strong>Anna K.</strong>
     </div>
 
-    <div class="opinia">
-      <p>“Rezerwacja była prosta, a sama wizyta bez stresu. Polecam.”</p>
+    <div class="review">
+      <p>“Rezerwacja była szybka, a wizyta bez stresu. Polecam.”</p>
       <strong>Michał P.</strong>
     </div>
+
+    <div class="review">
+      <p>“Nowoczesne miejsce, wszystko czyste i bardzo eleganckie.”</p>
+      <strong>Oliwia M.</strong>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact-section">
+  <div>
+    <p class="mini-title">Kontakt</p>
+    <h2>Odwiedź nasz gabinet</h2>
+    <p>ul. Uśmiechowa 12, Kraków</p>
+    <p>Telefon: 123 456 789</p>
+    <p>Email: kontakt@smiledent.pl</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Godziny otwarcia</h3>
+    <p>Poniedziałek - Piątek</p>
+    <strong>09:00 - 17:00</strong>
+    <button class="main-btn open-modal">Umów wizytę</button>
   </div>
 </section>
 
@@ -90,27 +169,24 @@
     <button class="close" id="closeBtn">×</button>
 
     <p class="mini-title">Rezerwacja</p>
-    <h2>Umów wizytę</h2>
+    <h2>Umów wizytę online</h2>
 
-    <div class="booking-box">
-      <p>
-        Kliknij przycisk poniżej, aby przejść do prawdziwego kalendarza rezerwacji Google.
-      </p>
+    <p class="modal-text">
+      Kliknij przycisk poniżej, aby przejść do prawdziwego kalendarza rezerwacji Google.
+    </p>
 
-      <a
-        href="https://calendar.app.google/HMvNPzbq7ndNqo9Z7"
-        target="_blank"
-        class="booking-btn">
-        Otwórz kalendarz rezerwacji
-      </a>
-    </div>
+    <a
+      href="https://calendar.app.google/HMvNPzbq7ndNqo9Z7"
+      target="_blank"
+      class="booking-btn">
+      Otwórz kalendarz rezerwacji
+    </a>
   </div>
 </div>
 
 <footer>
   <h3>SmileDent</h3>
-  <p>ul. Uśmiechowa 12, Kraków</p>
-  <p>123 456 789 · kontakt@smiledent.pl</p>
+  <p>Nowoczesna stomatologia w Krakowie</p>
 </footer>
 
 <script src="script.js"></script>
